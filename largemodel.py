@@ -1,4 +1,4 @@
-# trainmodel.py  ← TURNS YOUR TEXT DATASET INTO 99% ACCURACY MODEL IN ONE RUN
+# larger model
 
 import pandas as pd
 from sklearn.model_selection import train_test_split
@@ -56,6 +56,7 @@ X_train, X_val, y_train, y_val = train_test_split(
     X, y_enc, test_size=0.15, random_state=42, stratify=y_enc
 )
 
+# using an XGB Clasifier
 model = XGBClassifier(
     n_estimators=800,
     max_depth=8,
